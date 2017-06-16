@@ -1,0 +1,17 @@
+body{
+
+	background-color: lightblue;
+}
+
+#ctx{
+
+	background-color: antiquewhite;
+}
+
+#container{
+
+	width: 900px;
+	height:700px;
+	margin: auto;
+	border: 20px darkslategrey solid;
+}

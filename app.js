@@ -1,11 +1,14 @@
 var express = require('express');
 var app = express();
 var serv = require('http').Server(app);
+var path = require('path')
 
 app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/client/index.html');
 });
-app.use('/client',express.static(__dirname + '/client'));
+//app.use('/client',express.static(__dirname + '/client'));
+app.use(express.static(path.join(__dirname, 'client')));
+
 
 serv.listen(3000, "0.0.0.0");
 console.log("Server has started");
@@ -18,7 +21,7 @@ var Player = function(id){
 		x:250,
 		y:250,
 		id:id,
-		name:"Loser",
+		name:"New Player",
 		pressingRight:false,
 		pressingLeft:false,
 		pressingUp:false,
