@@ -3,15 +3,35 @@ body{
 	background-color: lightblue;
 }
 
-#ctx{
+#canvas{
 
 	background-color: antiquewhite;
 }
 
+#txtValue{
+border: 4px solid darkslategrey;
+   
+    background-color: antiquewhite;
+    color: black;
+}
+
+#btnSubmit{
+
+	width: 135px;
+}
+
 #container{
 
-	width: 900px;
-	height:700px;
+	width: 700px;
+	height:500px;
 	margin: auto;
 	border: 20px darkslategrey solid;
+}
+
+*:focus {
+    outline: none;
+}
+input:focus {
+  outline-color: transparent;
+  outline-style: none;
 }

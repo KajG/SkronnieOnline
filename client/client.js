@@ -1,16 +1,16 @@
-var ctx = document.getElementById("ctx").getContext("2d");
+var ctx = document.getElementById("canvas").getContext("2d");
     ctx.font = '30px Arial';
     var socket = io();
 
     socket.on('newPos', function(data){
-        
-        ctx.clearRect(0,0,900,700);
+
+        ctx.clearRect(0,0,700,500);
         for(var i = 0 ; i < data.length; i++)
         ctx.fillText(data[i].name,data[i].x,data[i].y);
         //ctx.fillRect(data[i].x,data[i].y, 100, 100);
     });
 
-    
+
 
     var nameChange = function(){
         socket.emit('nameChange', {
@@ -26,7 +26,7 @@ var ctx = document.getElementById("ctx").getContext("2d");
         else if(event.keyCode === 65) //a
             socket.emit('keyPress',{inputId:'left',state:true});
         else if(event.keyCode === 87) // w
-            socket.emit('keyPress',{inputId:'up',state:true});      
+            socket.emit('keyPress',{inputId:'up',state:true});
     }
      document.onkeyup = function(event){
         if(event.keyCode === 68)    //d

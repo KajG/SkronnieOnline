@@ -5,14 +5,27 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<div id="nameInput"></div>
+<h4>Change Name:</h4>
+<input type = "text"
+       id = "txtValue" 
+       placeholder="Change Nickname"
+       onkeydown = "if (event.keyCode == 13)
+    document.getElementById('btnSubmit').click()"    
+/>
+</br>
+<input type = "button"
+       id = "btnSubmit"
+       value = "submit"
+       onclick = "nameChange();"
+/>
+
 <div id="container">
-    <canvas id="ctx" width="900" height="700" style="border:1px solid #000000;"></canvas>
+    <canvas id="canvas" width="700" height="500" ></canvas>
 </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
     <script src="client.js">  </script>
-    <script src="cube.js"></script>
-<input type="text" name="value" id="txtValue"/>
-<input type="button" value="submit" onclick="nameChange()" />
+    <script src="balls.js">  </script>
 
 </body>
 </html>

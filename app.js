@@ -26,9 +26,10 @@ var Player = function(id){
 		pressingLeft:false,
 		pressingUp:false,
 		pressingDown:false,
-		maxSpd:10
+		maxSpd:15
 	}
 	self.updatePosition = function(){
+
 		if(self.pressingRight)
 			self.x+= self.maxSpd;
 		if(self.pressingLeft)

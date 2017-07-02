@@ -1,4 +1,4 @@
-var c = document.getElementById("ctx");
+var c = document.getElementById("canvas");
 var context = c.getContext("2d");
 
 /*ctx.moveTo(0,0);
@@ -7,4 +7,4 @@ ctx.stroke();*/
 
 
 
-setInterval(function(){ context.fillRect(100,100, 50,50); }, 3000);
+setInterval(function(){ context.fillRect(100,100, 50,50); }, 3000/25);
